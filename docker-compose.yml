@@ -1,12 +1,14 @@
 services:
   zookeeper:
     image: confluentinc/cp-zookeeper:7.4.0
+    platform: linux/amd64
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
     restart: unless-stopped
 
   kafka:
     image: confluentinc/cp-kafka:7.4.0
+    platform: linux/amd64
     depends_on:
       - zookeeper
     ports:
@@ -142,6 +144,7 @@ services:
 
   dashboard:
     build: ./dashboard
+    platform: linux/amd64
     ports:
       - "5050:5050"
     depends_on:
@@ -154,6 +157,7 @@ services:
 
   redis-consumer:
     build: ./kafka_consumer
+    platform: linux/amd64
     command: python redis_consumer.py
     depends_on:
       - kafka
@@ -167,6 +171,7 @@ services:
 
   postgres-consumer:
     build: ./kafka_consumer
+    platform: linux/amd64
     command: python postgres_consumer.py
     depends_on:
       - kafka
@@ -184,6 +189,7 @@ services:
 
   postgres:
     image: postgres:16
+    platform: linux/amd64
     environment:
       POSTGRES_DB: taxi_db
       POSTGRES_USER: taxi
