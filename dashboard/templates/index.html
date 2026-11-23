@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Taxi Fleet Monitoring</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <h1>Taxi Fleet Monitoring</h1>
+    <a href="{{ url_for('show_benchmarks') }}">
+        <button class="get-benchmark-results">Get Benchmark Results</button>
+    </a>
+
+    <div id="map"></div>
+
+    <div class="container">
+        <div class="column">
+            <div class="metric-label">Currently driving taxis</div>
+            <div id="currently-driving" class="metric">0</div>
+            <div class="metric-label">Overall distance of all taxis</div>
+            <div id="overall-distance" class="metric">0.00 km</div>
+        </div>
+
+        <div class="column">
+            <h3>Area violations</h3>
+            <ul id="area-violations"></ul>
+        </div>
+
+        <div class="column">
+            <h3>Speeding incidents</h3>
+            <ul id="speeding-incidents"></ul>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='taxi.js') }}"></script>
+</body>
+</html>

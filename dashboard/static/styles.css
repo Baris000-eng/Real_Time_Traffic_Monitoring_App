@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f6f9;
+}
+
+h1 {
+    color: #333;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.metric {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.metric-label {
+    font-size: 14px;
+    color: #666;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+    color: #dc3545;
+    font-weight: bold;
+}
+
+li.area {
+    color: #ffc107;
+}
+/* Custom class for clickable alert elements */
+.clickable-alert {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    padding: 6px 8px;
+    border-radius: 4px;
+}
+
+.clickable-alert:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.get-benchmark-results {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    background-color: lightblue;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+}
+
+.get-benchmark-results:hover {
+    background-color: skyblue;
+}

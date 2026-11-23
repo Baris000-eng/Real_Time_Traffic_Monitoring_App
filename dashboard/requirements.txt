@@ -1,0 +1,4 @@
+flask==3.0.0
+redis==5.0.1
+flask-sse==0.2.1
+flask_sock==0.7.0
