@@ -1,7 +1,4 @@
-# Real-Time Taxi Fleet Monitor — BD26_Project_T1_B
-
-**Module:** Big Data — Lab Exercises  
-**Team:** BD26_Project_T1_B
+# Real-Time Taxi Fleet Monitoring Web Application
 
 ## Description
 
